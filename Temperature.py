@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.interpolate import CubicSpline
 
 # Load your data
-data = pd.read_csv(r'IOT-temp.csv')
+data = pd.read_csv(r'data\IOT-temp.csv')
 # Inspect the first few rows to understand the data format
 print(data.head())
 import pandas as pd
@@ -105,7 +105,7 @@ intercept = best_model.intercept_
 print("Best Polynomial equation:", print_polynomial(coefficients, intercept))
 
 # Convert timestamps to a numeric format
-data['timestamp'] = pd.to_datetime(data['timestamp'], format='%m-%d-%Y %H:%M')
+data['timestamp'] = pd.to_datetime(data['timestamp'], format='%d-%m-%Y %H:%M')
 data['timestamp'] = (data['timestamp'].astype('int64') // 10**9).astype(np.int64)  # Convert to seconds since epoch
 
 # Extract features and target variable
