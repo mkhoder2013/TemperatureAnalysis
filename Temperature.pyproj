@@ -21,9 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="module1.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="module1.py" />
+    <Compile Include="module2.py" />
+    <Compile Include="PythonApplication4.py" />
     <Compile Include="Temperature.py" />
   </ItemGroup>
   <ItemGroup>

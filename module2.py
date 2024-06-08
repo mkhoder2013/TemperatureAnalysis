@@ -16,20 +16,28 @@ data['timestamp'] = (data['timestamp'].astype('int64') // 10**9).astype(np.int64
 X = data['timestamp'].values
 y = data['temperature'].values
 
-# Create a cubic spline interpolation of the data
-cs = CubicSpline(X, y)
+# Fit a polynomial regression model (use a lower degree for smoothness)
+degree = 10  # Adjust the degree as needed
+coefficients = np.polyfit(X, y, degree)
+polynomial = np.poly1d(coefficients)
+
+# Print the polynomial equation
+print("Polynomial equation coefficients (in descending order of powers):")
+for i, coef in enumerate(coefficients):
+    print(f"a_{degree - i} = {coef}")
 
 # Generate a finer set of points for a smoother curve
 X_fine = np.linspace(X.min(), X.max(), 1000)
-y_fine = cs(X_fine)
+y_fine = polynomial(X_fine)
 
 # Plot the original data points
 plt.scatter(X, y, color='blue', label='Original data')
 
-# Plot the interpolated curve
-plt.plot(X_fine, y_fine, color='red', label='Cubic spline interpolation')
+# Plot the polynomial fit
+plt.plot(X_fine, y_fine, color='red', label='Polynomial fit')
 plt.xlabel('Timestamp')
 plt.ylabel('Temperature')
 plt.legend()
 plt.show()
+
 
