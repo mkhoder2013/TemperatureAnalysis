@@ -1,4 +1,5 @@
 Temperature Analysis using ARIMA Model and Additional Techniques 
+
 Overview
 This project implements a time-series analysis and forecasting model using the ARIMA (Autoregressive Integrated Moving Average) method along with 
 additional techniques such as polynomial regression and Fourier analysis. The goal is to analyze historical temperature data and forecast future 
@@ -12,3 +13,9 @@ Fourier Analysis: Fourier analysis is used to decompose the temperature data int
 Forecasting: Future temperature values are forecasted using the trained models from ARIMA, polynomial regression, and Fourier analysis.
 Visualization: The results, including historical temperature trends and forecasted values from different methods, are visualized using plots.
 
+Usage
+Clone the repository to your local machine.
+Install the required dependencies .
+Execute the ARIMA model script Arima.py to train the model and generate ARIMA forecasts.
+Run the polynomial regression script polynomial.py to perform polynomial regression analysis and generate forecasts.
+Execute the Fourier analysis script fourier_analysis.py 
