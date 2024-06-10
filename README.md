@@ -23,8 +23,8 @@ This project implements a time-series analysis and forecasting model using the A
 1. **Clone the repository to your local machine**:
 
     ```bash
-    git clone https://github.com/mkhoder2013/TenderedFramework.git
-    cd TenderedFramework
+    git clone https://github.com/mkhoder2013/TemperatureAnalysis.git
+    cd TemperatureAnalysis
 2. **Execute the ARIMA model script** `Arima.py` to train the model and generate ARIMA forecasts:
 
     ```bash
@@ -43,4 +43,4 @@ This project implements a time-series analysis and forecasting model using the A
     python fourier_analysis.py
     ```
     ```
-    
+ 5.**I used the IDE visual studion .net 2019   
